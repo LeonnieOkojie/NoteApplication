@@ -38,11 +38,14 @@ const note3 = new Note({
 
 note1.save().then(result => {
   console.log('note1 saved!')
+  console.log(result)
   note2.save().then(result => {
     console.log('note2 saved!')
+    console.log(result)
     note3.save().then(result => {
-    console.log('note3 saved!')
-    mongoose.connection.close()
+      console.log('note3 saved!')
+      console.log(result)
+      mongoose.connection.close()
     })
   })
 })
